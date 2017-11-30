@@ -26,9 +26,10 @@ void PID::UpdateError(double cte) {
 }
 
 double PID::TotalError() { 
-	double steering_angle = -Kp * p_error - Ki * i_error - Kd * d_error; 
+	double steering_angle = (-Kp * p_error) - (Ki * i_error) - (Kd * d_error); 
 	if(steering_angle <= -1.0){steering_angle = -1.0;}
 	if(steering_angle >= 1.0){steering_angle = 1.0;}
+	std::cout<<"Calculator Called and calculated angle is: " << steering_angle << std::endl;
 	return steering_angle;
 }
 
