@@ -75,9 +75,9 @@ int main()
           steer_value = steer_angle * scale_factor;
 
           // DEBUG
-          std::cout << "p_err: " << pid.p_error << "  i_err: " << pid.i_error << "  d_err: " << pid.d_error << std::endl;
-          std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
-          std::cout << "Speed: " << speed << std::endl;
+          //std::cout << "p_err: " << pid.p_error << "  i_err: " << pid.i_error << "  d_err: " << pid.d_error << std::endl;
+          //std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
+          //std::cout << "Speed: " << speed << std::endl;
 
 
           json msgJson;
