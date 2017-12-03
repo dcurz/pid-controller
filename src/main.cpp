@@ -70,6 +70,7 @@ int main()
           // DEBUG
           std::cout << "p_err: " << pid.p_error << "  i_err: " << pid.i_error << "  d_err: " << pid.d_error << std::endl;
           std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
+          std::cout << "Speed: " << speed << std::endl;
 
 
           json msgJson;
