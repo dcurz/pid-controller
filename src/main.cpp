@@ -32,9 +32,9 @@ int main()
 {
   uWS::Hub h;
 
-  double Kp = 0.2;
+  double Kp = 0.15;
   double Ki = .004;
-  double Kd = 3.0;
+  double Kd = 5.0;
 
   PID pid;
   pid.Init(Kp, Ki, Kd);
