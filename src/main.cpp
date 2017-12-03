@@ -55,7 +55,9 @@ int main()
           double cte = std::stod(j[1]["cte"].get<std::string>());
           double speed = std::stod(j[1]["speed"].get<std::string>());
           double angle = std::stod(j[1]["steering_angle"].get<std::string>());
+          double steer_angle;
           double steer_value;
+          double scale_factor;
           /*
           * TODO: Calcuate steering value here, remember the steering value is
           * [-1, 1].
@@ -65,7 +67,11 @@ int main()
           
           pid.UpdateError(cte);
 
-          steer_value = pid.TotalError();
+          steer_angle = pid.TotalError();
+
+          scale_factor = speed/30.0;
+
+          steer_value = steer_angle * scale_factor;
 
           // DEBUG
           std::cout << "p_err: " << pid.p_error << "  i_err: " << pid.i_error << "  d_err: " << pid.d_error << std::endl;
