@@ -34,7 +34,7 @@ int main()
 
   double Kp = 0.15;
   double Ki = .004;
-  double Kd = 7.0;
+  double Kd = 9.0;
 
   PID pid;
   pid.Init(Kp, Ki, Kd);
